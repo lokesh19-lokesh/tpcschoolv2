@@ -31,19 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const animateCounters = () => {
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-target');
-            const speed = 200;
-            const inc = target / speed;
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
 
-            const updateCount = () => {
-                const count = +counter.innerText;
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(updateCount, 1);
+            const updateCount = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Ease out quad function
+                const easedProgress = progress * (2 - progress);
+
+                const currentValue = Math.floor(easedProgress * target);
+                counter.innerText = currentValue.toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
                 } else {
-                    counter.innerText = target;
+                    counter.innerText = target.toLocaleString();
                 }
             };
-            updateCount();
+            requestAnimationFrame(updateCount);
         });
     };
 
@@ -52,11 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (statsSection) {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
-                animateCounters();
+                setTimeout(animateCounters, 400); // Small delay to sync with reveal animation
                 observer.unobserve(statsSection);
             }
-        }, { threshold: 0.5 });
+        }, { threshold: 0.2 });
         observer.observe(statsSection);
+    }
+    else {
+        // If not on home page, try other pages or run if visible
+        if (counters.length > 0) {
+            animateCounters();
+        }
     }
 
     // Form Validation
