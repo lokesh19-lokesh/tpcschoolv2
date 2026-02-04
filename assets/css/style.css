@@ -429,17 +429,57 @@ footer {
 }
 
 @media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: rgba(7, 11, 20, 0.95);
+        backdrop-filter: blur(15px);
+        margin: 15px -15px 0;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+
+    .nav-link {
+        padding: 10px 0 !important;
+    }
+
     .welcome-info-section {
         text-align: center;
         padding: 80px 0;
     }
 
+    .welcome-info-section .display-5 {
+        font-size: 2.2rem;
+    }
+
     .circular-media-box {
         margin-top: 4rem;
+        max-width: 400px;
     }
 
     .mini-feature-list {
         display: inline-block;
         text-align: left;
+        margin: 2rem auto;
+        max-width: 500px;
+    }
+
+    .mini-feature-item {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .welcome-info-section .display-5 {
+        font-size: 1.8rem;
+    }
+
+    .mini-feature-list {
+        display: block;
+        max-width: 100%;
+        padding: 0 20px;
     }
 }
