@@ -283,6 +283,10 @@ h2 .emphasis {
 }
 
 /* Stats Section */
+.stats-section {
+    background: #070b14;
+}
+
 .stat-card {
     text-align: center;
     padding: 2rem;
