@@ -119,13 +119,20 @@ body {
     color: white;
 }
 
-.hero-title .emphasis {
+.emphasis {
     font-family: 'Playfair Display', serif;
-    font-size: 5rem;
     font-style: italic;
     color: #00a3ff;
     display: inline-block;
     line-height: 1;
+}
+
+.hero-title .emphasis {
+    font-size: 5rem;
+}
+
+h2 .emphasis {
+    font-size: 1.1em;
 }
 
 /* Responsive Adjustments */
@@ -356,4 +363,79 @@ footer {
     height: 100px;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+
+/* Welcome Section Styles */
+.welcome-info-section {
+    padding: 120px 0;
+    background: linear-gradient(to bottom, #04091a, #070b14);
+}
+
+.welcome-info-section .section-subtitle {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #00a3ff;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #00a3ff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.circular-media-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.main-circular-img {
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 0 50px rgba(0, 163, 255, 0.15);
+    transition: var(--transition-smooth);
+}
+
+.main-circular-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 70px rgba(0, 163, 255, 0.25);
+}
+
+.mini-feature-list {
+    margin: 2.5rem 0;
+}
+
+.mini-feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.mini-feature-item i {
+    color: #00a3ff;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.mini-feature-item span {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+@media (max-width: 991.98px) {
+    .welcome-info-section {
+        text-align: center;
+        padding: 80px 0;
+    }
+
+    .circular-media-box {
+        margin-top: 4rem;
+    }
+
+    .mini-feature-list {
+        display: inline-block;
+        text-align: left;
+    }
 }
