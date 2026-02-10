@@ -3,11 +3,11 @@
 :root {
     --primary-gradient: linear-gradient(135deg, #00a3ff 0%, #4b0082 100%);
     --secondary-gradient: linear-gradient(135deg, #002e7a 0%, #00ccff 100%);
-    --dark-bg: #04091a;
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
+    --dark-bg: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -38,9 +38,9 @@ body {
 .navbar {
     transition: var(--transition-smooth);
     padding: 1.2rem 0;
-    background: rgba(4, 9, 26, 0.7);
+    background: rgba(248, 250, 252, 0.7);
     backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .navbar-brand img {
@@ -51,10 +51,10 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(4, 9, 26, 0.95);
+    background: rgba(248, 250, 252, 0.95);
     backdrop-filter: blur(12px);
     padding: 0.8rem 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .navbar.scrolled .navbar-brand img {
@@ -103,7 +103,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(4, 9, 26, 0.95), rgba(4, 9, 26, 0.4));
+    background: linear-gradient(to right, rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.4));
     z-index: 1;
 }
 
@@ -116,7 +116,7 @@ body {
     font-size: 4.5rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: white;
+    color: var(--text-primary);
 }
 
 .emphasis {
@@ -183,7 +183,7 @@ h2 .emphasis {
 
     .service-card-premium {
         padding: 1.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 }
 
@@ -252,9 +252,9 @@ h2 .emphasis {
 }
 
 .service-card-premium {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 2.5rem;
     border-radius: 0;
     transition: var(--transition-smooth);
@@ -262,9 +262,10 @@ h2 .emphasis {
 }
 
 .service-card-premium:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 1);
     transform: translateY(-15px);
     border-bottom-color: #00a3ff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .service-card-premium i {
@@ -284,7 +285,7 @@ h2 .emphasis {
 
 /* Stats Section */
 .stats-section {
-    background: #070b14;
+    background: #f1f5f9;
 }
 
 .stat-card {
@@ -318,7 +319,7 @@ section {
 
 /* Footer */
 footer {
-    background: #070b14;
+    background: #f1f5f9;
     padding: 80px 0 30px;
     border-top: 1px solid var(--glass-border);
 }
@@ -372,7 +373,7 @@ footer {
 /* Welcome Section Styles */
 .welcome-info-section {
     padding: 120px 0;
-    background: linear-gradient(to bottom, #04091a, #070b14);
+    background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
 }
 
 .welcome-info-section .section-subtitle {
@@ -397,8 +398,8 @@ footer {
 .main-circular-img {
     width: 100%;
     border-radius: 50%;
-    border: 10px solid rgba(255, 255, 255, 0.03);
-    box-shadow: 0 0 50px rgba(0, 163, 255, 0.15);
+    border: 10px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 50px rgba(0, 163, 255, 0.1);
     transition: var(--transition-smooth);
 }
 
@@ -430,12 +431,12 @@ footer {
 
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background: rgba(7, 11, 20, 0.95);
+        background: rgba(248, 250, 252, 0.95);
         backdrop-filter: blur(15px);
         margin: 15px -15px 0;
         padding: 20px;
         border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .navbar-nav {

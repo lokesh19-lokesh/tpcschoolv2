@@ -14,14 +14,14 @@
     <style>
         .sidebar-nav {
             width: 260px;
-            background: #0f172a;
+            background: #ffffff;
             min-height: 100vh;
-            border-right: 1px solid var(--glass-border);
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .main-content {
             flex: 1;
-            background: #070b14;
+            background: #f8fafc;
             padding: 30px;
         }
 
@@ -36,8 +36,8 @@
 
         .sidebar-link:hover,
         .sidebar-link.active {
-            background: rgba(99, 102, 241, 0.1);
-            color: white;
+            background: rgba(99, 102, 241, 0.05);
+            color: #6366f1;
             border-left: 4px solid #6366f1;
         }
 
@@ -47,10 +47,11 @@
         }
 
         .dash-card {
-            background: #1e293b;
-            border: 1px solid var(--glass-border);
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.05);
             padding: 20px;
             border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
@@ -80,7 +81,7 @@
         <main class="main-content">
             <header class="d-flex justify-content-between align-items-center mb-5">
                 <div class="d-flex align-items-center">
-                    <button id="sidebarToggle" class="btn btn-link text-white d-lg-none me-3 p-0">
+                    <button id="sidebarToggle" class="btn btn-link text-dark d-lg-none me-3 p-0">
                         <i class="fas fa-bars fs-3"></i>
                     </button>
                     <h2 class="mb-0">Admin <span class="gradient-text">Overview</span></h2>
@@ -131,7 +132,7 @@
             <div class="dash-card">
                 <h5 class="mb-4">Recent Admissions</h5>
                 <div class="table-responsive">
-                    <table class="table table-dark table-borderless mb-0">
+                    <table class="table table-borderless mb-0">
                         <thead>
                             <tr class="text-secondary">
                                 <th>Student Name</th>
