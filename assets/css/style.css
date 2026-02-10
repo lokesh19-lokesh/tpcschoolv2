@@ -179,7 +179,7 @@ body {
 .emphasis {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    color: #00a3ff;
+    color: #d12924;
     display: inline-block;
     line-height: 1;
 }
@@ -369,7 +369,7 @@ h2 .emphasis {
 
 .service-card-premium i {
     font-size: 2.5rem;
-    color: #00a3ff;
+    color: #d12924;
     margin-bottom: 1.5rem;
     display: block;
 }
