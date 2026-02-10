@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Set Active Nav Link
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
+            link.classList.add('active');
+        }
+    });
+
     // Reveal Animations on Scroll
     const reveals = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {
