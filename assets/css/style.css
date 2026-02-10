@@ -210,6 +210,47 @@ h2 .emphasis {
     /* Industrial look often uses smaller radii or square */
 }
 
+.btn-watch-preview {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    border: 1px solid #6366f1;
+    padding: 8px 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-watch-preview:hover {
+    background: #6366f1;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-watch-preview-hero {
+    background: white;
+    color: #00a3ff;
+    border: 2px solid #00a3ff;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 163, 255, 0.1);
+}
+
+.btn-watch-preview-hero:hover {
+    background: #00a3ff;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 163, 255, 0.3);
+}
+
 .hvr-sweep-to-right:before {
     content: "";
     position: absolute;
@@ -585,6 +626,10 @@ footer {
         padding: 20px;
         border-radius: 12px;
         border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-nav .btn-watch-preview {
+        margin-bottom: 15px;
     }
 
     .navbar-nav {
