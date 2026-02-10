@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Schedule | TPC SCHOOL</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <style>
+        .sidebar-nav {
+            width: 260px;
+            background: #ffffff;
+            min-height: 100vh;
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .main-content {
+            flex: 1;
+            background: #f8fafc;
+            padding: 30px;
+        }
+
+        .sidebar-link {
+            padding: 15px 25px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background: rgba(99, 102, 241, 0.05);
+            color: #6366f1;
+            border-left: 4px solid #6366f1;
+        }
+
+        .sidebar-link i {
+            margin-right: 15px;
+            width: 20px;
+        }
+
+        .schedule-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .table td {
+            padding: 20px 15px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside id="sidebarNav" class="sidebar-nav">
+            <div class="p-4 border-bottom border-light mb-4">
+                <a href="index.html" class="navbar-brand fw-bold fs-4 text-dark">
+                    <img src="assets/img/logo.png" alt="TPC School Logo" style="height: 50px;">
+                </a>
+            </div>
+            <nav>
+                <a href="student-dashboard.html" class="sidebar-link"><i class="fas fa-user-circle"></i> Student
+                    Portal</a>
+                <a href="student-courses.html" class="sidebar-link"><i class="fas fa-book"></i> Courses</a>
+                <a href="student-assignments.html" class="sidebar-link"><i class="fas fa-tasks"></i> Assignments</a>
+                <a href="student-schedule.html" class="sidebar-link active"><i class="fas fa-calendar-alt"></i>
+                    Schedule</a>
+                <a href="student-grades.html" class="sidebar-link"><i class="fas fa-graduation-cap"></i> Grades</a>
+                <a href="student-fees.html" class="sidebar-link"><i class="fas fa-wallet"></i> My Fees</a>
+                <a href="dashboard.html" class="sidebar-link text-primary mt-5"><i class="fas fa-user-shield"></i> Admin
+                    View</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="d-flex justify-content-between align-items-center mb-5">
+                <div class="d-flex align-items-center">
+                    <button id="sidebarToggle" class="btn btn-link text-dark d-lg-none me-3 p-0">
+                        <i class="fas fa-bars fs-3"></i>
+                    </button>
+                    <h2 class="mb-0">Weekly <span class="gradient-text">Schedule</span></h2>
+                </div>
+                <div class="d-flex align-items-center text-end">
+                    <span class="text-secondary small d-block">Semester 5</span>
+                    <span class="fw-bold">Mon, Oct 26 - Fri, Oct 30</span>
+                </div>
+            </header>
+
+            <div class="schedule-card">
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead class="bg-light">
+                            <tr>
+                                <th style="width: 15%;">Time</th>
+                                <th style="width: 17%;">Monday</th>
+                                <th style="width: 17%;">Tuesday</th>
+                                <th style="width: 17%;">Wednesday</th>
+                                <th style="width: 17%;">Thursday</th>
+                                <th style="width: 17%;">Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold">09:00 - 10:30</td>
+                                <td class="bg-primary-subtle rounded m-1">Advanced DS</td>
+                                <td>-</td>
+                                <td class="bg-primary-subtle rounded m-1">Advanced DS</td>
+                                <td>-</td>
+                                <td class="bg-info-subtle rounded m-1">Discrete Math</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">10:45 - 12:15</td>
+                                <td>-</td>
+                                <td class="bg-success-subtle rounded m-1">Quantum Mech</td>
+                                <td>-</td>
+                                <td class="bg-success-subtle rounded m-1">Quantum Mech</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">12:15 - 01:30</td>
+                                <td colspan="5" class="text-secondary small text-uppercase">Lunch Break</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">01:30 - 03:00</td>
+                                <td class="bg-warning-subtle rounded m-1">AI Ethics</td>
+                                <td class="bg-info-subtle rounded m-1">Discrete Math</td>
+                                <td>-</td>
+                                <td class="bg-warning-subtle rounded m-1">AI Ethics</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mt-5 text-center">
+                <a href="student-dashboard.html" class="btn btn-outline-custom">Back to Dashboard</a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sidebar Backdrop -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop d-lg-none"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarNav = document.getElementById('sidebarNav');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+        function toggleSidebar() {
+            sidebarNav.classList.toggle('active');
+            sidebarBackdrop.classList.toggle('active');
+            document.body.style.overflow = sidebarNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        sidebarToggle.addEventListener('click', toggleSidebar);
+        sidebarBackdrop.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+
+</html>
