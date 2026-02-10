@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,700&display=swap');
 
 :root {
-    --primary-gradient: linear-gradient(135deg, #00a3ff 0%, #4b0082 100%);
+    --primary-gradient: linear-gradient(135deg, #d12924 0%, #8b0000 100%);
     --secondary-gradient: linear-gradient(135deg, #002e7a 0%, #00ccff 100%);
     --dark-bg: #f8fafc;
     --card-bg: rgba(255, 255, 255, 0.6);
@@ -256,7 +256,7 @@ h2 .emphasis {
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    background: #00a3ff;
+    background: #d12924;
     color: white;
     border: none;
     overflow: hidden;
@@ -289,8 +289,8 @@ h2 .emphasis {
 
 .btn-watch-preview-hero {
     background: white;
-    color: #00a3ff;
-    border: 2px solid #00a3ff;
+    color: #d12924;
+    border: 2px solid #d12924;
     padding: 12px 30px;
     font-weight: 600;
     border-radius: 4px;
@@ -302,7 +302,7 @@ h2 .emphasis {
 }
 
 .btn-watch-preview-hero:hover {
-    background: #00a3ff;
+    background: #d12924;
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 163, 255, 0.3);
@@ -363,7 +363,7 @@ h2 .emphasis {
 .service-card-premium:hover {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-15px);
-    border-bottom-color: #00a3ff;
+    border-bottom-color: #d12924;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -518,11 +518,11 @@ footer .text-secondary {
 .welcome-info-section .section-subtitle {
     display: inline-block;
     padding-bottom: 5px;
-    border-bottom: 2px solid #00a3ff;
+    border-bottom: 2px solid #d12924;
     margin-bottom: 2rem;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #00a3ff;
+    color: #d12924;
     text-transform: uppercase;
     font-size: 0.9rem;
 }
@@ -558,7 +558,7 @@ footer .text-secondary {
 }
 
 .mini-feature-item i {
-    color: #00a3ff;
+    color: #d12924;
     font-size: 1.2rem;
     margin-right: 15px;
 }
