@@ -429,6 +429,153 @@ footer {
     color: var(--text-primary);
 }
 
+/* Dashboard Base Styles */
+.sidebar-nav {
+    width: 260px;
+    background: #ffffff;
+    min-height: 100vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.main-content {
+    flex: 1;
+    background: #f8fafc;
+    padding: 30px;
+    min-width: 0;
+    /* Important for flex child shrinkage */
+}
+
+.sidebar-link {
+    padding: 15px 25px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: var(--transition-smooth);
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background: rgba(99, 102, 241, 0.05);
+    color: #6366f1;
+    border-left: 4px solid #6366f1;
+}
+
+.sidebar-link i {
+    margin-right: 15px;
+    width: 20px;
+}
+
+.dash-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+}
+
+.attendance-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.fee-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.grade-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-card .table td {
+    padding: 20px 15px;
+    vertical-align: middle;
+}
+
+.assignment-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.course-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    height: 100%;
+    transition: var(--transition-smooth);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.attendance-bar {
+    height: 10px;
+    border-radius: 5px;
+    background: #e2e8f0;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.attendance-progress {
+    height: 100%;
+    background: var(--primary-gradient);
+}
+
+.report-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f1f5f9;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+
+.report-item:hover {
+    background: #e2e8f0;
+}
+
+.form-switch .form-check-input {
+    width: 3rem;
+    height: 1.5rem;
+}
+
 @media (max-width: 991.98px) {
     .navbar-collapse {
         background: rgba(248, 250, 252, 0.95);
@@ -507,6 +654,28 @@ footer {
     .main-content {
         padding: 20px;
     }
+
+    .main-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .dash-card {
+        padding: 15px;
+    }
+
+    .dash-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .sidebar-link {
+        padding: 12px 20px;
+    }
+
+    .main-content {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -518,5 +687,56 @@ footer {
         display: block;
         max-width: 100%;
         padding: 0 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    header.d-flex.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+
+    header .d-flex.align-items-center:last-child {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        padding-top: 15px;
+    }
+
+    header .btn {
+        flex: 1;
+        margin-right: 10px !important;
+        font-size: 0.8rem;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+    /* Fix search input width on mobile */
+    .input-group.w-25 {
+        width: 100% !important;
+        margin-top: 10px;
+    }
+
+    .d-flex.justify-content-between.align-items-center.mb-4 {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .dash-card {
+        padding: 15px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Force tables to scroll without squeezing columns */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table-responsive table {
+        min-width: 800px;
     }
 }
