@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Fees | TPC SCHOOL</title>
+    <title>My Attendance | TPC SCHOOL</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -46,7 +46,7 @@
             width: 20px;
         }
 
-        .fee-card {
+        .attendance-card {
             background: #ffffff;
             border: 1px solid rgba(0, 0, 0, 0.05);
             padding: 25px;
@@ -71,11 +71,11 @@
                     Portal</a>
                 <a href="student-courses.html" class="sidebar-link"><i class="fas fa-book"></i> Courses</a>
                 <a href="student-assignments.html" class="sidebar-link"><i class="fas fa-tasks"></i> Assignments</a>
-                <a href="student-attendance.html" class="sidebar-link"><i class="fas fa-calendar-check"></i>
+                <a href="student-attendance.html" class="sidebar-link active"><i class="fas fa-calendar-check"></i>
                     Attendance</a>
                 <a href="student-schedule.html" class="sidebar-link"><i class="fas fa-calendar-alt"></i> Schedule</a>
                 <a href="student-grades.html" class="sidebar-link"><i class="fas fa-graduation-cap"></i> Grades</a>
-                <a href="student-fees.html" class="sidebar-link active"><i class="fas fa-wallet"></i> My Fees</a>
+                <a href="student-fees.html" class="sidebar-link"><i class="fas fa-wallet"></i> My Fees</a>
                 <a href="dashboard.html" class="sidebar-link text-primary mt-5"><i class="fas fa-user-shield"></i> Admin
                     View</a>
             </nav>
@@ -88,69 +88,92 @@
                     <button id="sidebarToggle" class="btn btn-link text-dark d-lg-none me-3 p-0">
                         <i class="fas fa-bars fs-3"></i>
                     </button>
-                    <h2 class="mb-0">Fee <span class="gradient-text">Statement</span></h2>
+                    <h2 class="mb-0">My <span class="gradient-text">Attendance</span></h2>
                 </div>
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-primary"><i class="fas fa-print me-2"></i> Download Receipt</button>
+                    <div class="me-4 text-end">
+                        <small class="text-secondary d-block">Overall Attendance</small>
+                        <span class="fw-bold fs-4">92.5%</span>
+                    </div>
                 </div>
             </header>
 
             <div class="row g-4 mb-4">
-                <div class="col-md-8">
-                    <div class="fee-card">
-                        <h5 class="mb-4">Transaction History</h5>
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead class="text-secondary">
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Description</th>
-                                        <th>Ref No.</th>
-                                        <th>Amount</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Aug 15, 2026</td>
-                                        <td>Semester 5 Tuition Fee</td>
-                                        <td>#PAY-7721</td>
-                                        <td>₹45,000</td>
-                                        <td><span class="badge bg-success-subtle text-success">Paid</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Aug 15, 2026</td>
-                                        <td>Library & Lab Charges</td>
-                                        <td>#PAY-7722</td>
-                                        <td>₹5,000</td>
-                                        <td><span class="badge bg-success-subtle text-success">Paid</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Oct 01, 2026</td>
-                                        <td>Exam Registration Fee</td>
-                                        <td>#PAY-8140</td>
-                                        <td>₹2,500</td>
-                                        <td><span class="badge bg-success-subtle text-success">Paid</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <div class="col-md-3">
+                    <div class="attendance-card text-center">
+                        <small class="text-secondary">Total Classes</small>
+                        <h3 class="mb-0 mt-2">120</h3>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="fee-card h-100 bg-primary text-white">
-                        <h5>Account Summary</h5>
-                        <div class="my-4">
-                            <small class="opacity-75">Total Outstanding</small>
-                            <h2 class="mb-0">₹0</h2>
-                        </div>
-                        <p class="small opacity-75">You are currently in good standing. All fees for Semester 5 are
-                            cleared.</p>
-                        <hr class="opacity-25">
-                        <div class="small">
-                            <i class="fas fa-info-circle me-2"></i> Next payment due: Jan 2027
-                        </div>
+                <div class="col-md-3">
+                    <div class="attendance-card text-center">
+                        <small class="text-secondary">Present</small>
+                        <h3 class="mb-0 mt-2 text-success">111</h3>
                     </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="attendance-card text-center">
+                        <small class="text-secondary">Absent</small>
+                        <h3 class="mb-0 mt-2 text-danger">6</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="attendance-card text-center">
+                        <small class="text-secondary">Leaves</small>
+                        <h3 class="mb-0 mt-2 text-info">3</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attendance-card">
+                <h5 class="mb-4">Subject-wise Analysis</h5>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="text-secondary">
+                            <tr>
+                                <th>Subject</th>
+                                <th>Professor</th>
+                                <th>Total</th>
+                                <th>Attended</th>
+                                <th>Percentage</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold">Advanced Data Structures</td>
+                                <td>Dr. Alan Turing</td>
+                                <td>30</td>
+                                <td>28</td>
+                                <td>93.3%</td>
+                                <td><span class="badge bg-success-subtle text-success">Excellent</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Quantum Mechanics</td>
+                                <td>Prof. Richard Feynman</td>
+                                <td>28</td>
+                                <td>24</td>
+                                <td>85.7%</td>
+                                <td><span class="badge bg-info-subtle text-info">Good</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Discrete Mathematics</td>
+                                <td>Dr. Grace Hopper</td>
+                                <td>32</td>
+                                <td>31</td>
+                                <td>96.8%</td>
+                                <td><span class="badge bg-success-subtle text-success">Excellent</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">AI Ethics</td>
+                                <td>Ms. Emily Brown</td>
+                                <td>30</td>
+                                <td>28</td>
+                                <td>93.3%</td>
+                                <td><span class="badge bg-success-subtle text-success">Excellent</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
