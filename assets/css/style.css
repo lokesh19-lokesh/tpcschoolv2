@@ -63,8 +63,13 @@ body {
 .nav-link {
     color: white !important;
     font-weight: 500;
+    margin: 0 10px;
     position: relative;
     transition: var(--transition-smooth);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 5px;
 }
 
 .nav-link::after {
@@ -222,9 +227,9 @@ h2 .emphasis {
 }
 
 .btn-watch-preview {
-    background: rgba(99, 102, 241, 0.1);
-    color: #6366f1;
-    border: 1px solid #6366f1;
+    background: white;
+    color: #d12923;
+    border: 2px solid white;
     padding: 8px 20px;
     font-weight: 600;
     border-radius: 4px;
@@ -235,10 +240,11 @@ h2 .emphasis {
 }
 
 .btn-watch-preview:hover {
-    background: #6366f1;
+    background: transparent;
     color: white;
+    border-color: white;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 .btn-watch-preview-hero {
