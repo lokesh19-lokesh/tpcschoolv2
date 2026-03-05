@@ -126,5 +126,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+
+        // Floating Contact Buttons Injection
+        const injectFloatingButtons = () => {
+            const contactWrap = document.createElement('div');
+            contactWrap.className = 'floating-contact-wrap';
+            contactWrap.innerHTML = `
+            <a href="tel:+918500693113" class="floating-btn btn-call" title="Call Us">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/918500693113" class="floating-btn btn-whatsapp" target="_blank" title="WhatsApp Us">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        `;
+            document.body.appendChild(contactWrap);
+        };
+
+        injectFloatingButtons();
     });
 });
