@@ -37,27 +37,74 @@ body {
 /* Navbar */
 .navbar {
     transition: var(--transition-smooth);
-    padding: 1.2rem 0;
-    background: #d12923;
+    padding: 1rem 0;
+    background: #d12923 !important;
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-brand img {
-    height: 85px;
+    height: 50px;
     width: auto;
     transition: var(--transition-smooth);
-    filter: drop-shadow(0 0 10px rgba(0, 163, 255, 0.3));
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        padding: 0.6rem 2rem;
+        margin: 15px auto;
+        width: 96%;
+        max-width: 1400px;
+        border-radius: 12px;
+        left: 0;
+        right: 0;
+        border: none;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand img {
+        height: 65px;
+    }
+
+    .navbar.scrolled {
+        padding: 0.5rem 2rem;
+        margin-top: 10px;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar.scrolled .navbar-brand img {
+        height: 55px;
+    }
+}
+
+/* Medium Desktop Responsiveness Fixes (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar {
+        padding: 0.6rem 1rem;
+        width: 98%;
+    }
+
+    .navbar-brand img {
+        height: 50px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        margin: 0 5px;
+    }
+
+    .btn-watch-preview,
+    .nav-item .hvr-sweep-to-right {
+        padding: 8px 15px !important;
+        font-size: 0.85rem !important;
+    }
 }
 
 .navbar.scrolled {
     padding: 0.8rem 0;
-    background: #d12923;
+    background: #d12923 !important;
     box-shadow: 0 4px 20px rgba(209, 41, 35, 0.15);
-}
-
-.navbar.scrolled .navbar-brand img {
-    height: 85px;
 }
 
 .nav-link {
@@ -263,7 +310,24 @@ h2 .emphasis {
     padding: 12px 30px;
     font-weight: 600;
     border-radius: 4px;
-    /* Industrial look often uses smaller radii or square */
+}
+
+/* Navbar Request Demo Button Override (Desktop Only) */
+@media (min-width: 992px) {
+    .nav-item .hvr-sweep-to-right {
+        background: white;
+        color: #d12924;
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-item .hvr-sweep-to-right:hover {
+        background: #f8f8f8;
+        color: #d12924;
+        transform: translateY(-1px);
+    }
 }
 
 .btn-watch-preview {
