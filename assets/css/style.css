@@ -44,7 +44,7 @@ body {
 }
 
 .navbar-brand img {
-    height: 70px;
+    height: 85px;
     width: auto;
     transition: var(--transition-smooth);
     filter: drop-shadow(0 0 10px rgba(0, 163, 255, 0.3));
@@ -57,7 +57,7 @@ body {
 }
 
 .navbar.scrolled .navbar-brand img {
-    height: 55px;
+    height: 85px;
 }
 
 .nav-link {
@@ -953,7 +953,7 @@ footer .text-secondary {
 }
 
 .footer-logo img {
-    height: 90px;
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
