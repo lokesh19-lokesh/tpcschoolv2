@@ -883,6 +883,7 @@ footer .text-secondary {
         min-width: 800px;
     }
 }
+
 /* Floating Contact Buttons */
 .floating-contact-wrap {
     position: fixed;
@@ -927,9 +928,11 @@ footer .text-secondary {
     0% {
         box-shadow: 0 0 0 0 rgba(209, 41, 36, 0.4);
     }
+
     70% {
         box-shadow: 0 0 0 15px rgba(209, 41, 36, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(209, 41, 36, 0);
     }
@@ -941,9 +944,16 @@ footer .text-secondary {
         right: 20px;
         gap: 10px;
     }
+
     .floating-btn {
         width: 50px;
         height: 50px;
         font-size: 1.5rem;
     }
+}
+
+.footer-logo img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
 }
