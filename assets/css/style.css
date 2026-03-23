@@ -518,6 +518,120 @@ section {
     transform: translateY(0);
 }
 
+/* Growth Ecosystem Section */
+.ecosystem-section {
+    background: #ffffff;
+    position: relative;
+    padding: 100px 0;
+}
+
+.ecosystem-visual-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hub-circle {
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 0 40px rgba(209, 41, 36, 0.1);
+    border: 2px dashed #d12924;
+    padding: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.hub-circle img {
+    width: 100%;
+    height: auto;
+}
+
+.ecosystem-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.ecosystem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(209, 41, 36, 0.1);
+    border-color: rgba(209, 41, 36, 0.2);
+}
+
+.card-icon-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(209, 41, 36, 0.05);
+    color: #d12924;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    border: 1px solid rgba(209, 41, 36, 0.1);
+}
+
+.ecosystem-card h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: var(--text-primary);
+}
+
+.foundation-badge {
+    background: #ffffff;
+    display: inline-block;
+    padding: 20px 50px;
+    border-radius: 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border: 2px solid #d12924;
+    position: relative;
+    z-index: 5;
+}
+
+.foundation-badge h2 {
+    color: #d12924;
+    letter-spacing: 2px;
+}
+
+/* Connectors (Pseudo-elements for connecting cards) */
+@media (min-width: 992px) {
+    .ecosystem-visual-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 300px;
+        border: 2px dashed rgba(209, 41, 36, 0.1);
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+/* Animations */
+.ecosystem-card i {
+    transition: var(--transition-smooth);
+}
+
+.ecosystem-card:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
 /* Footer */
 footer {
     background: #d12923;
