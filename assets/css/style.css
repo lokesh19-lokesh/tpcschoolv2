@@ -34,6 +34,15 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Glassmorphism */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    --carousel-scale: 1;
+    --carousel-z: -650px;
+}
+
 /* Navbar */
 .navbar {
     transition: var(--transition-smooth);
@@ -522,16 +531,26 @@ section {
     padding: 100px 0;
 }
 
-/* Animations */
+/* Reveal Animations */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+.reveal.zoom-3d {
+    transform: perspective(1200px) rotateX(-15deg) translateY(40px) scale(0.95);
+    opacity: 0;
+}
+
+.reveal.zoom-3d.active {
+    transform: perspective(1200px) rotateX(0) translateY(0) scale(1);
+    opacity: 1;
 }
 
 /* Growth Ecosystem Section */
@@ -697,7 +716,7 @@ section {
     transform: scale(1.2) rotate(10deg);
 }
 
-/* Client Logos Slider */
+/* Client Logos Slider 3D Carousel */
 .client-logos-section {
     position: relative;
     z-index: 10;
@@ -705,10 +724,14 @@ section {
 
 .logo-slider {
     overflow: hidden;
-    padding: 20px 0;
+    padding: 60px 0;
     background: white;
     white-space: nowrap;
     position: relative;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Gradient masks for smooth fade in/out on edges */
@@ -734,11 +757,12 @@ section {
 }
 
 .logo-track {
-    display: inline-flex;
-    align-items: center;
-    gap: 4rem;
-    padding-left: 4rem; /* match gap so it loops seamlessly */
-    animation: scroll-left-to-right 35s linear infinite;
+    width: 200px;
+    height: 80px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin-carousel 40s linear infinite;
+    transform: scale(var(--carousel-scale)) translateZ(var(--carousel-z)) rotateY(0deg);
 }
 
 .logo-track:hover {
@@ -746,41 +770,57 @@ section {
 }
 
 .logo-track img {
-    height: 60px;
-    width: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 80px;
     object-fit: contain;
-    filter: grayscale(100%) opacity(0.6);
-    transition: all 0.3s ease;
+    backface-visibility: hidden; /* Hide logos on the back half */
+    transition: opacity 0.3s ease;
     cursor: pointer;
 }
 
 .logo-track img:hover {
-    filter: grayscale(0%) opacity(1);
-    transform: scale(1.05);
+    opacity: 0.8;
 }
 
-@keyframes scroll-left-to-right {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+/* Position 20 items in a 3D circle (360 / 20 = 18 degrees each) */
+.logo-track img:nth-child(1)  { transform: rotateY(0deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(2)  { transform: rotateY(18deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(3)  { transform: rotateY(36deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(4)  { transform: rotateY(54deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(5)  { transform: rotateY(72deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(6)  { transform: rotateY(90deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(7)  { transform: rotateY(108deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(8)  { transform: rotateY(126deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(9)  { transform: rotateY(144deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(10) { transform: rotateY(162deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(11) { transform: rotateY(180deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(12) { transform: rotateY(198deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(13) { transform: rotateY(216deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(14) { transform: rotateY(234deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(15) { transform: rotateY(252deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(16) { transform: rotateY(270deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(17) { transform: rotateY(288deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(18) { transform: rotateY(306deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(19) { transform: rotateY(324deg) translateZ(calc(var(--carousel-z) * -1)); }
+.logo-track img:nth-child(20) { transform: rotateY(342deg) translateZ(calc(var(--carousel-z) * -1)); }
+
+@keyframes spin-carousel {
+    0%   { transform: scale(var(--carousel-scale)) translateZ(var(--carousel-z)) rotateY(0deg); }
+    100% { transform: scale(var(--carousel-scale)) translateZ(var(--carousel-z)) rotateY(360deg); }
 }
 
 @media (max-width: 768px) {
+    :root {
+        --carousel-scale: 0.6;
+        --carousel-z: -420px;
+    }
+
     .logo-slider::before,
     .logo-slider::after {
         width: 80px;
-    }
-    
-    .logo-track {
-        gap: 2.5rem;
-        padding-left: 2.5rem;
-    }
-    
-    .logo-track img {
-        height: 45px;
     }
 }
 
