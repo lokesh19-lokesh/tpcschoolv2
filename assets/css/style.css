@@ -697,6 +697,93 @@ section {
     transform: scale(1.2) rotate(10deg);
 }
 
+/* Client Logos Slider */
+.client-logos-section {
+    position: relative;
+    z-index: 10;
+}
+
+.logo-slider {
+    overflow: hidden;
+    padding: 20px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Gradient masks for smooth fade in/out on edges */
+.logo-slider::before,
+.logo-slider::after {
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-slider::before {
+    left: 0;
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-slider::after {
+    right: 0;
+    background: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 4rem;
+    padding-left: 4rem; /* match gap so it loops seamlessly */
+    animation: scroll-left-to-right 35s linear infinite;
+}
+
+.logo-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-track img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-track img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.05);
+}
+
+@keyframes scroll-left-to-right {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-slider::before,
+    .logo-slider::after {
+        width: 80px;
+    }
+    
+    .logo-track {
+        gap: 2.5rem;
+        padding-left: 2.5rem;
+    }
+    
+    .logo-track img {
+        height: 45px;
+    }
+}
+
 /* Mobile App Section */
 .mobile-app-section {
     background: #D12924;
