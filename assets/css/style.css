@@ -476,6 +476,22 @@ h2 .emphasis {
     display: block;
 }
 
+.service-card-premium.card-red {
+    background: #D12924;
+    border-top: 2px solid #D12924;
+}
+
+.service-card-premium.card-red i,
+.service-card-premium.card-red h4,
+.service-card-premium.card-red p {
+    color: white !important;
+}
+
+.service-card-premium.card-red:hover {
+    background: #b0211a; /* Slightly darker on hover */
+    border-bottom-color: white;
+}
+
 .gradient-text {
     background: var(--primary-gradient);
     -webkit-background-clip: text;
