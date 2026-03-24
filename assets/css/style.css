@@ -541,10 +541,33 @@ section {
     justify-content: center;
     margin: 0 auto;
     box-shadow: 0 0 40px rgba(209, 41, 36, 0.1);
-    border: 2px dashed #d12924;
     padding: 20px;
     position: relative;
     z-index: 5;
+    animation: floatingHub 4s ease-in-out infinite;
+}
+
+.hub-circle::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 2px dashed rgba(209, 41, 36, 0.3);
+    border-radius: 50%;
+    animation: rotateHub 15s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateHub {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes floatingHub {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 .hub-circle img {
@@ -557,17 +580,30 @@ section {
     padding: 30px 20px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: var(--transition-smooth);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     border: 1px solid rgba(0, 0, 0, 0.03);
     height: 100%;
     position: relative;
     z-index: 2;
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
 }
 
+.reveal.active .ecosystem-card {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Staggered Load */
+.ecosystem-grid .col-6:nth-child(1) .ecosystem-card { transition-delay: 0.1s; }
+.ecosystem-grid .col-6:nth-child(2) .ecosystem-card { transition-delay: 0.3s; }
+.ecosystem-grid .col-6:nth-child(3) .ecosystem-card { transition-delay: 0.5s; }
+.ecosystem-grid .col-6:nth-child(4) .ecosystem-card { transition-delay: 0.7s; }
+
 .ecosystem-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(209, 41, 36, 0.1);
-    border-color: rgba(209, 41, 36, 0.2);
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(209, 41, 36, 0.15);
+    border-color: rgba(209, 41, 36, 0.3);
 }
 
 .card-icon-circle {
@@ -582,6 +618,13 @@ section {
     margin: 0 auto 20px;
     font-size: 1.5rem;
     border: 1px solid rgba(209, 41, 36, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.ecosystem-card:hover .card-icon-circle {
+    transform: rotateY(360deg);
+    background: #d12924;
+    color: #ffffff;
 }
 
 .ecosystem-card h5 {
@@ -600,6 +643,12 @@ section {
     border: 2px solid #d12924;
     position: relative;
     z-index: 5;
+    animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); transform: scale(1); }
+    50% { box-shadow: 0 0 40px rgba(209, 41, 36, 0.2); transform: scale(1.05); }
 }
 
 .foundation-badge h2 {
