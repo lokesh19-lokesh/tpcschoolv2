@@ -1218,6 +1218,11 @@ footer .text-secondary {
         position: fixed;
         left: -260px;
         top: 0;
+        height: 100vh;
+        height: 100dvh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 40px;
         z-index: 1050;
         transition: var(--transition-smooth);
     }
