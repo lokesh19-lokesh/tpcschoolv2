@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Classes | Faculty Portal | Pick My School</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo2.png">
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside id="sidebarNav" class="sidebar-nav">
+            <div class="p-4 border-bottom border-light mb-4">
+                <a href="index.html" class="navbar-brand fw-bold fs-4 text-dark">
+                    <img src="assets/img/logo2.png" alt="Pick My School Logo">
+                </a>
+                <div class="view-switcher d-flex flex-column mt-3" style="gap: 8px;">
+                    <a href="super-admin-dashboard.html" class="view-link" title="Super Admin Dashboard">
+                        <i class="fas fa-user-gear"></i> Super Admin View
+                    </a>
+                    <a href="dashboard.html" class="view-link" title="Admin Dashboard">
+                        <i class="fas fa-user-shield"></i> Admin View
+                    </a>
+                    <a href="faculty-dashboard.html" class="view-link active-view" title="Faculty Portal">
+                        <i class="fas fa-chalkboard-teacher"></i> Faculty View
+                    </a>
+                    <a href="student-dashboard.html" class="view-link" title="Student Portal">
+                        <i class="fas fa-user-graduate"></i> Student View
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <a href="faculty-dashboard.html" class="sidebar-link"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="faculty-my-classes.html" class="sidebar-link active"><i class="fas fa-book"></i> My Classes</a>
+                <a href="faculty-attendance.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Attendance</a>
+                <a href="faculty-assignments.html" class="sidebar-link"><i class="fas fa-tasks"></i> Assignments</a>
+                <a href="faculty-grades.html" class="sidebar-link"><i class="fas fa-graduation-cap"></i> Grades</a>
+                <a href="faculty-students.html" class="sidebar-link"><i class="fas fa-users"></i> My Students</a>
+                <a href="student-dashboard.html" class="sidebar-link text-primary mt-5"><i
+                        class="fas fa-user-graduate"></i> Student View</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="d-flex justify-content-between align-items-center mb-5">
+                <div class="d-flex align-items-center">
+                    <button id="sidebarToggle" class="btn btn-link text-dark d-lg-none me-3 p-0">
+                        <i class="fas fa-bars fs-3"></i>
+                    </button>
+                    <h2 class="mb-0">My <span class="gradient-text">Classes</span></h2>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="me-4 text-end">
+                        <small class="text-secondary d-block">Welcome back,</small>
+                        <span class="fw-bold">Prof. Robert Fox</span>
+                    </div>
+                    <img src="https://ui-avatars.com/api/?name=Robert+Fox&background=10b981&color=fff" class="rounded-circle"
+                        width="45" alt="Avatar">
+                </div>
+            </header>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="dash-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary-subtle text-primary p-3 rounded-3 me-3">
+                                <i class="fas fa-laptop-code fs-4"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Computer Networks</h6>
+                                <small class="text-secondary">CS-301 | Sec A</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between small text-secondary">
+                            <span>Students: 42</span>
+                            <span>Credit: 4.0</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm btn-primary w-100">View Roster</button>
+                            <button class="btn btn-sm btn-outline-secondary w-100">Syllabus</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dash-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success-subtle text-success p-3 rounded-3 me-3">
+                                <i class="fas fa-project-diagram fs-4"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Software Engineering</h6>
+                                <small class="text-secondary">CS-305 | Sec B</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between small text-secondary">
+                            <span>Students: 38</span>
+                            <span>Credit: 3.5</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm btn-primary w-100">View Roster</button>
+                            <button class="btn btn-sm btn-outline-secondary w-100">Syllabus</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dash-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-warning-subtle text-warning p-3 rounded-3 me-3">
+                                <i class="fas fa-database fs-4"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Database Systems</h6>
+                                <small class="text-secondary">CS-208 | Sec A</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between small text-secondary">
+                            <span>Students: 44</span>
+                            <span>Credit: 4.0</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-sm btn-primary w-100">View Roster</button>
+                            <button class="btn btn-sm btn-outline-secondary w-100">Syllabus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <h5 class="mb-4">Weekly Schedule</h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center align-middle">
+                        <thead class="bg-light">
+                            <tr>
+                                <th>Time</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold bg-light">09:00 - 10:30</td>
+                                <td class="bg-primary-subtle border-primary">Comp Networks<br><small>Lab 302</small></td>
+                                <td>-</td>
+                                <td class="bg-primary-subtle border-primary">Comp Networks<br><small>Lab 302</small></td>
+                                <td>-</td>
+                                <td class="bg-primary-subtle border-primary">Comp Networks<br><small>Lab 302</small></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold bg-light">11:00 - 12:30</td>
+                                <td>-</td>
+                                <td class="bg-success-subtle border-success">Soft Eng<br><small>Room 405</small></td>
+                                <td>-</td>
+                                <td class="bg-success-subtle border-success">Soft Eng<br><small>Room 405</small></td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold bg-light">02:00 - 03:30</td>
+                                <td class="bg-warning-subtle border-warning">Databases<br><small>Room 405</small></td>
+                                <td class="bg-warning-subtle border-warning">Databases<br><small>Room 405</small></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td class="bg-warning-subtle border-warning">Databases<br><small>Room 405</small></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sidebar Backdrop -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop d-lg-none"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarNav = document.getElementById('sidebarNav');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+        function toggleSidebar() {
+            sidebarNav.classList.toggle('active');
+            sidebarBackdrop.classList.toggle('active');
+            document.body.style.overflow = sidebarNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        sidebarToggle.addEventListener('click', toggleSidebar);
+        sidebarBackdrop.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+
+</html>
