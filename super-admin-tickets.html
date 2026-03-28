@@ -4,17 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Admin Dashboard | Pick My School</title>
+    <title>Ticketing Support | Pick My School</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logo2.png">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Pick My School - Leading School ERP Management Software to streamline institution administration with AI-driven insights.">
-    <meta name="keywords" content="School ERP, Education Management Software, Student Information System, Pick My School">
+    <meta name="description" content="Manage support tickets from institutions globally.">
 </head>
 
 <body>
@@ -45,10 +42,10 @@
                 </div>
             </div>
             <nav>
-                <a href="super-admin-dashboard.html" class="sidebar-link active"><i class="fas fa-th-large"></i> Dashboard</a>
-                <a href="super-admin-institutions.html" class="sidebar-link"><i class="fas fa-university"></i> Institutions</a>
+                <a href="super-admin-dashboard.html" class="sidebar-link"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="super-admin-institutions.html" class="sidebar-link"><i class="fas fa- university"></i> Institutions</a>
                 <a href="super-admin-users.html" class="sidebar-link"><i class="fas fa-users-cog"></i> Global Users</a>
-                <a href="super-admin-tickets.html" class="sidebar-link"><i class="fas fa-ticket-alt"></i> Ticketing Support</a>
+                <a href="super-admin-tickets.html" class="sidebar-link active"><i class="fas fa-ticket-alt"></i> Ticketing Support</a>
                 <a href="super-admin-audit.html" class="sidebar-link"><i class="fas fa-clipboard-list"></i> Audit Logs</a>
                 <a href="super-admin-reports.html" class="sidebar-link"><i class="fas fa-chart-pie"></i> Global Reports</a>
                 <a href="super-admin-settings.html" class="sidebar-link"><i class="fas fa-sliders-h"></i> System Settings</a>
@@ -62,90 +59,80 @@
                     <button id="sidebarToggle" class="btn btn-link text-dark d-lg-none me-3 p-0">
                         <i class="fas fa-bars fs-3"></i>
                     </button>
-                    <h2 class="mb-0">Super Admin <span class="gradient-text">Overview</span></h2>
+                    <h2 class="mb-0">Ticketing <span class="gradient-text">Support</span></h2>
                 </div>
                 <div class="d-flex align-items-center">
-                    <div class="me-4 text-end">
-                        <small class="text-secondary d-block">Welcome back,</small>
-                        <span class="fw-bold">Super Admin</span>
-                    </div>
                     <img src="https://ui-avatars.com/api/?name=SA&background=ef4444&color=fff" class="rounded-circle"
                         width="45" alt="Avatar">
                 </div>
             </header>
 
-            <!-- Stats Widgets -->
             <div class="row g-4 mb-4">
-                <div class="col-md-3">
-                    <div class="dash-card">
-                        <small class="text-secondary">Total Institutions</small>
-                        <h3 class="mb-0 mt-2">12</h3>
-                        <small class="text-success"><i class="fas fa-arrow-up"></i> 2 new this month</small>
+                <div class="col-md-4">
+                    <div class="dash-card bg-primary-subtle border-primary border-opacity-25">
+                        <small class="text-primary-emphasis fw-bold">Open Tickets</small>
+                        <h2 class="mb-0 mt-2">12</h2>
+                        <small class="text-primary">4 Urgent</small>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="dash-card">
-                        <small class="text-secondary">Global Revenue</small>
-                        <h3 class="mb-0 mt-2">₹12.4M</h3>
-                        <small class="text-info">Exceeding Q3 targets</small>
+                <div class="col-md-4">
+                    <div class="dash-card bg-success-subtle border-success border-opacity-25">
+                        <small class="text-success-emphasis fw-bold">Resolved Today</small>
+                        <h2 class="mb-0 mt-2">45</h2>
+                        <small class="text-success">Avg reset time: 2h</small>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="dash-card">
-                        <small class="text-secondary">System Uptime</small>
-                        <h3 class="mb-0 mt-2">99.99%</h3>
-                        <small class="text-success">Perfect status</small>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="dash-card">
-                        <small class="text-secondary">Support Tickets</small>
-                        <h3 class="mb-0 mt-2">4</h3>
-                        <small class="text-warning">All urgent cleared</small>
+                <div class="col-md-4">
+                    <div class="dash-card bg-warning-subtle border-warning border-opacity-25">
+                        <small class="text-warning-emphasis fw-bold">Pending Approval</small>
+                        <h2 class="mb-0 mt-2">3</h2>
+                        <small class="text-warning">Resource allocation</small>
                     </div>
                 </div>
             </div>
 
-            <!-- Table Section -->
             <div class="dash-card">
-                <h5 class="mb-4">Institution Performance Overview</h5>
+                <h5 class="mb-4">Recent Support Requests</h5>
                 <div class="table-responsive">
-                    <table class="table table-borderless mb-0">
+                    <table class="table table-hover border-top">
                         <thead>
-                            <tr class="text-secondary">
-                                <th>Institution Name</th>
-                                <th>Admin</th>
+                            <tr>
+                                <th>Ticket ID</th>
+                                <th>Subject</th>
+                                <th>Institution</th>
+                                <th>Priority</th>
                                 <th>Status</th>
-                                <th>Renewal Date</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Greenwood High School</td>
-                                <td>Principal Smith</td>
-                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
-                                <td>Oct 2027</td>
+                                <td>#T-904</td>
+                                <td>API Integration Error</td>
+                                <td>Greenwood High</td>
+                                <td><span class="badge bg-danger">Urgent</span></td>
+                                <td><span class="badge bg-primary-subtle text-primary">In Progress</span></td>
+                                <td><button class="btn btn-sm btn-link">View</button></td>
                             </tr>
                             <tr>
-                                <td>St. Xavier's College</td>
-                                <td>Dr. David Miller</td>
-                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
-                                <td>Jan 2028</td>
+                                <td>#T-899</td>
+                                <td>Faculty Access Issue</td>
+                                <td>Oakridge</td>
+                                <td><span class="badge bg-warning text-dark">Medium</span></td>
+                                <td><span class="badge bg-secondary-subtle text-secondary">Open</span></td>
+                                <td><button class="btn btn-sm btn-link">View</button></td>
                             </tr>
                             <tr>
-                                <td>Sunshine International</td>
-                                <td>Maria Garcia</td>
-                                <td><span class="badge bg-warning-subtle text-warning">Expiring soon</span></td>
-                                <td>Nov 2026</td>
+                                <td>#T-882</td>
+                                <td>Monthly Report Bug</td>
+                                <td>St. Xavier's</td>
+                                <td><span class="badge bg-info text-dark">Low</span></td>
+                                <td><span class="badge bg-success-subtle text-success">Resolved</span></td>
+                                <td><button class="btn btn-sm btn-link">View</button></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-
-            <div class="mt-5 text-center">
-                <p class="text-secondary">This is a visual preview of the Pick My School Super Admin dashboard interface.</p>
-                <a href="index.html" class="btn btn-outline-custom">Return to Home</a>
             </div>
         </main>
     </div>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings | Pick My School</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/logo2.png">
+
+    <meta name="description" content="Configure global system settings and administrative preferences.">
+</head>
+
+<body>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside id="sidebarNav" class="sidebar-nav">
+            <button id="sidebarClose" class="sidebar-close d-lg-none" title="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="p-4 border-bottom border-light mb-4">
+                <a href="index.html" class="navbar-brand fw-bold fs-4 text-dark">
+                    <img src="assets/img/logo2.png" alt="Pick My School Logo">
+                </a>
+                <div class="view-switcher d-flex flex-column mt-3" style="gap: 8px;">
+                    <a href="super-admin-dashboard.html" class="view-link active-view" title="Super Admin Dashboard">
+                        <i class="fas fa-user-gear"></i> Super Admin View
+                    </a>
+                    <a href="dashboard.html" class="view-link" title="Admin Dashboard">
+                        <i class="fas fa-user-shield"></i> Admin View
+                    </a>
+                    <a href="faculty-dashboard.html" class="view-link" title="Faculty Portal">
+                        <i class="fas fa-chalkboard-teacher"></i> Faculty View
+                    </a>
+                    <a href="student-dashboard.html" class="view-link" title="Student Portal">
+                        <i class="fas fa-user-graduate"></i> Student View
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <a href="super-admin-dashboard.html" class="sidebar-link"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="super-admin-institutions.html" class="sidebar-link"><i class="fas fa-university"></i> Institutions</a>
+                <a href="super-admin-users.html" class="sidebar-link"><i class="fas fa-users-cog"></i> Global Users</a>
+                <a href="super-admin-tickets.html" class="sidebar-link"><i class="fas fa-ticket-alt"></i> Ticketing Support</a>
+                <a href="super-admin-audit.html" class="sidebar-link"><i class="fas fa-clipboard-list"></i> Audit Logs</a>
+                <a href="super-admin-reports.html" class="sidebar-link"><i class="fas fa-chart-pie"></i> Global Reports</a>
+                <a href="super-admin-settings.html" class="sidebar-link active"><i class="fas fa-sliders-h"></i> System Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="d-flex justify-content-between align-items-center mb-5">
+                <div class="d-flex align-items-center">
+                    <button id="sidebarToggle" class="btn btn-link text-dark d-lg-none me-3 p-0">
+                        <i class="fas fa-bars fs-3"></i>
+                    </button>
+                    <h2 class="mb-0">System <span class="gradient-text">Settings</span></h2>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img src="https://ui-avatars.com/api/?name=SA&background=ef4444&color=fff" class="rounded-circle"
+                        width="45" alt="Avatar">
+                </div>
+            </header>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="dash-card">
+                        <h5 class="mb-4">Global Configuration</h5>
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Platform Name</label>
+                                    <input type="text" class="form-control" value="Pick My School AI">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Support Email</label>
+                                    <input type="email" class="form-control" value="support@pickmyschool.ai">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Maintenance Mode</label>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="maintenanceSwitch">
+                                    <label class="form-check-label" for="maintenanceSwitch">Enable global maintenance mode</label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Default Local Currency</label>
+                                <select class="form-select">
+                                    <option value="INR" selected>Indian Rupee (₹)</option>
+                                    <option value="USD">US Dollar ($)</option>
+                                    <option value="EUR">Euro (€)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <div class="dash-card mt-4">
+                        <h5 class="mb-4">Security & Authentication</h5>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">Two-Factor Authentication</h6>
+                                    <small class="text-secondary">Require 2FA for all administrative logins</small>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">Password Complexity</h6>
+                                    <small class="text-secondary">Enforce strong password requirements</small>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="dash-card text-center py-5">
+                        <i class="fas fa-server fa-3x text-success mb-3"></i>
+                        <h5>System Health</h5>
+                        <p class="text-secondary small">All systems operational</p>
+                        <div class="p-3 bg-light rounded text-start mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Server Load</span>
+                                <span class="fw-bold">12%</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Storage Used</span>
+                                <span class="fw-bold">45%</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-outline-secondary">Run Diagnostics</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Sidebar Backdrop -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop d-lg-none"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const sidebarNav = document.getElementById('sidebarNav');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+        function toggleSidebar() {
+            sidebarNav.classList.toggle('active');
+            sidebarBackdrop.classList.toggle('active');
+            document.body.style.overflow = sidebarNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        sidebarToggle.addEventListener('click', toggleSidebar);
+        sidebarClose.addEventListener('click', toggleSidebar);
+        sidebarBackdrop.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+
+</html>

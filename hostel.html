@@ -4,50 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Management | Pick My School</title>
+    <title>Hostel Management | Pick My School</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="assets/img/logo2.png">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Pick My School - Leading School ERP Management Software to streamline institution administration with AI-driven insights.">
-    <meta name="keywords" content="School ERP, Education Management Software, Student Information System, Pick My School">
-    <meta property="og:title" content="Pick My School - Educational Automation ERP">
-    <meta property="og:description" content="Next-Gen School Management Software.">
-    <meta property="og:url" content="https://pickmyschoolai.com/">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="https://pickmyschoolai.com/">
-    
-    <!-- AEO / Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Pick My School",
-      "operatingSystem": "Web",
-      "applicationCategory": "EducationalApplication",
-      "url": "https://pickmyschoolai.com/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Patterns Infotech Pvt Ltd",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "501, Vasuki Chandini Jewel, Cyber Hills Colony, VIP Hills, Silicon Valley, Madhapur",
-          "addressLocality": "Hyderabad",
-          "addressRegion": "Telangana",
-          "postalCode": "500081",
-          "addressCountry": "IN"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-8500693113",
-          "contactType": "Customer Service"
-        }
-      }
-    }
-    </script>
 </head>
 
 <body>
@@ -80,13 +42,13 @@
             <nav>
                 <a href="dashboard.html" class="sidebar-link"><i class="fas fa-th-large"></i> Dashboard</a>
                 <a href="students.html" class="sidebar-link"><i class="fas fa-user-graduate"></i> Students</a>
-                <a href="faculty.html" class="sidebar-link active"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+                <a href="faculty.html" class="sidebar-link"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
                 <a href="attendance.html" class="sidebar-link"><i class="fas fa-calendar-check"></i> Attendance</a>
                 <a href="fees.html" class="sidebar-link"><i class="fas fa-money-bill-wave"></i> Fees & Finance</a>
                 <a href="exams.html" class="sidebar-link"><i class="fas fa-file-signature"></i> Exam Section</a>
                 <a href="courses.html" class="sidebar-link"><i class="fas fa-book-open"></i> Courses</a>
                 <a href="library.html" class="sidebar-link"><i class="fas fa-book"></i> Library</a>
-                <a href="hostel.html" class="sidebar-link"><i class="fas fa-hotel"></i> Hostel</a>
+                <a href="hostel.html" class="sidebar-link active"><i class="fas fa-hotel"></i> Hostel</a>
                 <a href="transport.html" class="sidebar-link"><i class="fas fa-bus"></i> Transport</a>
                 <a href="reports.html" class="sidebar-link"><i class="fas fa-chart-line"></i> Reports</a>
                 <a href="admin-tickets.html" class="sidebar-link"><i class="fas fa-headset"></i> Ticketing Support</a>
@@ -101,75 +63,71 @@
                     <button id="sidebarToggle" class="btn btn-link text-dark d-lg-none me-3 p-0">
                         <i class="fas fa-bars fs-3"></i>
                     </button>
-                    <h2 class="mb-0">Faculty <span class="gradient-text">Management</span></h2>
+                    <h2 class="mb-0">Hostel <span class="gradient-text">Management</span></h2>
                 </div>
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-primary hvr-sweep-to-right me-3"><i class="fas fa-plus me-2"></i> Hire
-                        Member</button>
-                    <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff" class="rounded-circle"
-                        width="45" alt="Avatar">
+                    <button class="btn btn-primary me-4"><i class="fas fa-plus me-2"></i>Assign Room</button>
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff" class="rounded-circle" width="45" alt="Avatar">
                 </div>
             </header>
 
             <div class="row g-4 mb-4">
                 <div class="col-md-4">
                     <div class="dash-card">
-                        <small class="text-secondary">Staff Strength</small>
-                        <h3 class="mb-0 mt-2">76</h3>
+                        <h5>Boys Hostel (Block A)</h5>
+                        <p class="text-secondary small">Capacity: 450</p>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-success" style="width: 82%;"></div>
+                        </div>
+                        <small class="text-secondary">82% Occupancy (369/450)</small>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="dash-card">
-                        <small class="text-secondary">On Leave</small>
-                        <h3 class="mb-0 mt-2">4</h3>
+                        <h5>Girls Hostel (Block B)</h5>
+                        <p class="text-secondary small">Capacity: 350</p>
+                        <div class="progress mb-2" style="height: 10px;">
+                            <div class="progress-bar bg-info" style="width: 95%;"></div>
+                        </div>
+                        <small class="text-secondary">95% Occupancy (332/350)</small>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="dash-card">
-                        <small class="text-secondary">Department Count</small>
-                        <h3 class="mb-0 mt-2">12</h3>
+                    <div class="dash-card bg-light border-0">
+                        <h5>Total Maintenance Requests</h5>
+                        <h2 class="text-warning">8</h2>
+                        <a href="#" class="btn btn-sm btn-link px-0 text-decoration-none fw-bold">View Pending Requests</a>
                     </div>
                 </div>
             </div>
 
             <div class="dash-card">
-                <h5 class="mb-4">Staff Directory</h5>
+                <h5 class="mb-4">Recent Room Allotments</h5>
                 <div class="table-responsive">
-                    <table class="table table-borderless table-hover mb-0">
+                    <table class="table table-hover">
                         <thead>
-                            <tr class="text-secondary">
-                                <th>Staff Name</th>
-                                <th>Department</th>
-                                <th>Designation</th>
-                                <th>Experience</th>
-                                <th>Rating</th>
-                                <th>Status</th>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Block</th>
+                                <th>Room No.</th>
+                                <th>Allotment Date</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="fw-bold">Dr. Robert Miller</td>
-                                <td>Science</td>
-                                <td>Head of Dept</td>
-                                <td>15 Years</td>
-                                <td><i class="fas fa-star text-warning"></i> 4.9</td>
-                                <td><span class="badge bg-success-subtle text-success">Present</span></td>
+                                <td>Kevin Peterson</td>
+                                <td>Block A</td>
+                                <td>A-201</td>
+                                <td>Oct 12, 2026</td>
+                                <td><button class="btn btn-sm btn-outline-secondary">Details</button></td>
                             </tr>
                             <tr>
-                                <td class="fw-bold">Sarah Jenkins</td>
-                                <td>Mathematics</td>
-                                <td>Senior Lecturer</td>
-                                <td>8 Years</td>
-                                <td><i class="fas fa-star text-warning"></i> 4.7</td>
-                                <td><span class="badge bg-info-subtle text-info">In Session</span></td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">Prof. David Green</td>
-                                <td>Computer Science</td>
-                                <td>Professor</td>
-                                <td>22 Years</td>
-                                <td><i class="fas fa-star text-warning"></i> 5.0</td>
-                                <td><span class="badge bg-warning-subtle text-warning">On Leave</span></td>
+                                <td>Sarah Parker</td>
+                                <td>Block B</td>
+                                <td>B-105</td>
+                                <td>Oct 15, 2026</td>
+                                <td><button class="btn btn-sm btn-outline-secondary">Details</button></td>
                             </tr>
                         </tbody>
                     </table>

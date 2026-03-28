@@ -56,6 +56,9 @@
     <div class="d-flex">
         <!-- Sidebar -->
         <aside id="sidebarNav" class="sidebar-nav">
+            <button id="sidebarClose" class="sidebar-close d-lg-none" title="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
             <div class="p-4 border-bottom border-light mb-4">
                 <a href="index.html" class="navbar-brand fw-bold fs-4 text-dark">
                     <img src="assets/img/logo2.png" alt="Pick My School Logo">
@@ -85,7 +88,7 @@
                 <a href="student-schedule.html" class="sidebar-link"><i class="fas fa-clock"></i> Time Tables</a>
                 <a href="student-fees.html" class="sidebar-link active"><i class="fas fa-money-bill-wave"></i> Fee Payments</a>
                 <a href="student-library.html" class="sidebar-link"><i class="fas fa-book"></i> Library</a>
-                <a href="student-hostel.html" class="sidebar-link"><i class="fas fa-hotel"></i> Hostel</a>
+                <a href="student-hostel.html" class="sidebar-link"><i class="fas fa-hotel"></i> Hostel & Mess</a>
                 <a href="student-feedback.html" class="sidebar-link"><i class="fas fa-poll-h"></i> Feedback Survey</a>
                 <a href="student-tickets.html" class="sidebar-link"><i class="fas fa-headset"></i> Ticketing Support</a>
                 <a href="student-profile.html" class="sidebar-link text-primary mt-5"><i class="fas fa-user-circle"></i> Profile</a>
@@ -177,6 +180,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const sidebarToggle = document.getElementById('sidebarToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
         const sidebarNav = document.getElementById('sidebarNav');
         const sidebarBackdrop = document.getElementById('sidebarBackdrop');
 
@@ -187,6 +191,7 @@
         }
 
         sidebarToggle.addEventListener('click', toggleSidebar);
+        sidebarClose.addEventListener('click', toggleSidebar);
         sidebarBackdrop.addEventListener('click', toggleSidebar);
     </script>
 </body>

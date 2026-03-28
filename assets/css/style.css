@@ -1047,9 +1047,9 @@ footer .text-secondary {
 
 .sidebar-link:hover,
 .sidebar-link.active {
-    background: rgba(99, 102, 241, 0.05);
-    color: #6366f1;
-    border-left: 4px solid #6366f1;
+    background: rgba(209, 41, 35, 0.05);
+    color: #d12923;
+    border-left: 4px solid #d12923;
 }
 
 .sidebar-link i {
@@ -1224,6 +1224,24 @@ footer .text-secondary {
 
     .sidebar-nav.active {
         left: 0;
+        box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+    }
+
+    .sidebar-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1060;
+        background: #f8fafc;
+        border: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d12923;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .sidebar-backdrop {
@@ -1232,8 +1250,8 @@ footer .text-secondary {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
         z-index: 1040;
         opacity: 0;
         visibility: hidden;
