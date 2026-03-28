@@ -74,72 +74,211 @@
                 </div>
             </header>
 
-            <!-- Stats Widgets -->
-            <div class="row g-4 mb-4">
-                <div class="col-md-3">
-                    <div class="dash-card">
-                        <small class="text-secondary">Total Institutions</small>
-                        <h3 class="mb-0 mt-2">12</h3>
-                        <small class="text-success"><i class="fas fa-arrow-up"></i> 2 new this month</small>
+            <!-- Module Switcher -->
+            <div class="module-switcher-bar">
+                <button class="module-btn active" onclick="switchModule('erp')">
+                    <i class="fas fa-chart-line"></i> ERP
+                </button>
+                <button class="module-btn" onclick="switchModule('canvas')">
+                    <i class="fas fa-paint-brush"></i> Canvas
+                </button>
+                <button class="module-btn" onclick="switchModule('whatsapp')">
+                    <i class="fab fa-whatsapp"></i> Whatsapp
+                </button>
+                <button class="module-btn" onclick="switchModule('social')">
+                    <i class="fas fa-share-nodes"></i> Social Media
+                </button>
+            </div>
+
+            <!-- ERP Module -->
+            <div id="erpModule" class="dashboard-module active">
+                <!-- Stats Widgets -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3">
+                        <div class="dash-card">
+                            <small class="text-secondary">Total Institutions</small>
+                            <h3 class="mb-0 mt-2">12</h3>
+                            <small class="text-success"><i class="fas fa-arrow-up"></i> 2 new this month</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dash-card">
+                            <small class="text-secondary">Global Revenue</small>
+                            <h3 class="mb-0 mt-2">₹12.4M</h3>
+                            <small class="text-info">Exceeding Q3 targets</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dash-card">
+                            <small class="text-secondary">System Uptime</small>
+                            <h3 class="mb-0 mt-2">99.99%</h3>
+                            <small class="text-success">Perfect status</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dash-card">
+                            <small class="text-secondary">Support Tickets</small>
+                            <h3 class="mb-0 mt-2">4</h3>
+                            <small class="text-warning">All urgent cleared</small>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="dash-card">
-                        <small class="text-secondary">Global Revenue</small>
-                        <h3 class="mb-0 mt-2">₹12.4M</h3>
-                        <small class="text-info">Exceeding Q3 targets</small>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="dash-card">
-                        <small class="text-secondary">System Uptime</small>
-                        <h3 class="mb-0 mt-2">99.99%</h3>
-                        <small class="text-success">Perfect status</small>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="dash-card">
-                        <small class="text-secondary">Support Tickets</small>
-                        <h3 class="mb-0 mt-2">4</h3>
-                        <small class="text-warning">All urgent cleared</small>
+
+                <!-- Table Section -->
+                <div class="dash-card">
+                    <h5 class="mb-4">Institution Performance Overview</h5>
+                    <div class="table-responsive">
+                        <table class="table table-borderless mb-0">
+                            <thead>
+                                <tr class="text-secondary">
+                                    <th>Institution Name</th>
+                                    <th>Admin</th>
+                                    <th>Status</th>
+                                    <th>Renewal Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Greenwood High School</td>
+                                    <td>Principal Smith</td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td>Oct 2027</td>
+                                </tr>
+                                <tr>
+                                    <td>St. Xavier's College</td>
+                                    <td>Dr. David Miller</td>
+                                    <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                                    <td>Jan 2028</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunshine International</td>
+                                    <td>Maria Garcia</td>
+                                    <td><span class="badge bg-warning-subtle text-warning">Expiring soon</span></td>
+                                    <td>Nov 2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
 
-            <!-- Table Section -->
-            <div class="dash-card">
-                <h5 class="mb-4">Institution Performance Overview</h5>
-                <div class="table-responsive">
-                    <table class="table table-borderless mb-0">
-                        <thead>
-                            <tr class="text-secondary">
-                                <th>Institution Name</th>
-                                <th>Admin</th>
-                                <th>Status</th>
-                                <th>Renewal Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Greenwood High School</td>
-                                <td>Principal Smith</td>
-                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
-                                <td>Oct 2027</td>
-                            </tr>
-                            <tr>
-                                <td>St. Xavier's College</td>
-                                <td>Dr. David Miller</td>
-                                <td><span class="badge bg-success-subtle text-success">Active</span></td>
-                                <td>Jan 2028</td>
-                            </tr>
-                            <tr>
-                                <td>Sunshine International</td>
-                                <td>Maria Garcia</td>
-                                <td><span class="badge bg-warning-subtle text-warning">Expiring soon</span></td>
-                                <td>Nov 2026</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- Canvas Module -->
+            <div id="canvasModule" class="dashboard-module">
+                <div class="canvas-app-window">
+                    <div class="canvas-toolbar">
+                        <div class="tool-btn active"><i class="fas fa-mouse-pointer"></i></div>
+                        <div class="tool-btn"><i class="fas fa-font"></i></div>
+                        <div class="tool-btn"><i class="fas fa-image"></i></div>
+                        <div class="tool-btn"><i class="fas fa-shapes"></i></div>
+                        <div class="tool-btn mt-auto"><i class="fas fa-download"></i></div>
+                    </div>
+                    <div class="canvas-workspace">
+                        <div class="design-surface d-flex align-items-center justify-content-center text-center p-5">
+                            <div>
+                                <img src="assets/img/logo2.png" alt="Logo" width="120" class="mb-4">
+                                <h1 class="display-4 fw-bold mb-3">ADMISSION OPEN</h1>
+                                <p class="lead mb-4">Enroll now for the academic year 2026-27</p>
+                                <div class="bg-danger text-white p-3 rounded-pill d-inline-block px-5">APPLY NOW</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Whatsapp Module -->
+            <div id="whatsappModule" class="dashboard-module">
+                <div class="wa-app-interface">
+                    <div class="wa-side-list">
+                        <div class="p-3 border-bottom d-flex align-items-center">
+                            <img src="https://ui-avatars.com/api/?name=SA&background=ef4444&color=fff" class="rounded-circle me-3" width="40">
+                            <h6 class="mb-0">Broadcast Lists</h6>
+                            <i class="fas fa-plus ms-auto text-secondary"></i>
+                        </div>
+                        <div class="p-3 border-bottom bg-light">
+                            <div class="d-flex justify-content-between mb-1">
+                                <strong>Parents Group A</strong>
+                                <small class="text-secondary">10:45 AM</small>
+                            </div>
+                            <small class="text-secondary text-truncate d-block">Monthly Newsletter sent...</small>
+                        </div>
+                        <div class="p-3 border-bottom">
+                            <div class="d-flex justify-content-between mb-1">
+                                <strong>Faculty Announcements</strong>
+                                <small class="text-secondary">Yesterday</small>
+                            </div>
+                            <small class="text-secondary text-truncate d-block">Meeting scheduled at 4PM</small>
+                        </div>
+                    </div>
+                    <div class="wa-main-chat d-flex align-items-center justify-content-center text-center">
+                        <div class="bg-white p-5 rounded-4 shadow-lg" style="max-width: 400px;">
+                            <i class="fab fa-whatsapp text-success display-1 mb-4"></i>
+                            <h4>WhatsApp API Dashboard</h4>
+                            <p class="text-secondary">Communicate with students and parents directly through our integrated API.</p>
+                            <button class="btn btn-success rounded-pill px-4 mt-3">Configure API</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Module -->
+            <div id="socialMediaModule" class="dashboard-module">
+                <div class="social-media-dash">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="social-channel-card">
+                                <div class="social-icon-box bg-primary text-white">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                                <h5 class="mb-2">Facebook Page</h5>
+                                <p class="text-secondary small">Connected: Pick My School Official</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="badge bg-success">Online</span>
+                                    <button class="btn btn-sm btn-outline-primary">Manage</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="social-channel-card">
+                                <div class="social-icon-box bg-info text-white">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <h5 class="mb-2">Instagram Business</h5>
+                                <p class="text-secondary small">Connected: @pickmyschoolai</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="badge bg-success">Online</span>
+                                    <button class="btn btn-sm btn-outline-info">Manage</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="dash-card">
+                                <h5 class="mb-4">Create Master Post</h5>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="3" placeholder="What's happening at your school?"></textarea>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <button class="btn btn-light"><i class="fas fa-image me-2"></i>Photo/Video</button>
+                                    <button class="btn btn-light"><i class="fas fa-calendar-alt me-2"></i>Schedule</button>
+                                    <button class="btn btn-danger ms-auto px-4 rounded-pill">Post to All Channels</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-sidebar">
+                        <div class="dash-card">
+                            <h6 class="mb-4">Recent Performance</h6>
+                            <div class="mb-4">
+                                <small class="text-secondary d-block mb-1">Total Reach</small>
+                                <h4 class="mb-0">45.2K</h4>
+                                <small class="text-success"><i class="fas fa-caret-up"></i> 15%</small>
+                            </div>
+                            <div class="mb-4">
+                                <small class="text-secondary d-block mb-1">Engagements</small>
+                                <h4 class="mb-0">12.8K</h4>
+                                <small class="text-success"><i class="fas fa-caret-up"></i> 8%</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -169,6 +308,24 @@
         sidebarToggle.addEventListener('click', toggleSidebar);
         sidebarClose.addEventListener('click', toggleSidebar);
         sidebarBackdrop.addEventListener('click', toggleSidebar);
+
+        // Module Switching Logic
+        function switchModule(moduleId) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.module-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.currentTarget.classList.add('active');
+            
+            // Hide all modules
+            document.querySelectorAll('.dashboard-module').forEach(mod => mod.classList.remove('active'));
+            
+            // Show target module
+            if(moduleId === 'erp') document.getElementById('erpModule').classList.add('active');
+            if(moduleId === 'canvas') document.getElementById('canvasModule').classList.add('active');
+            if(moduleId === 'whatsapp') document.getElementById('whatsappModule').classList.add('active');
+            if(moduleId === 'social') document.getElementById('socialMediaModule').classList.add('active');
+        }
     </script>
 </body>
 
