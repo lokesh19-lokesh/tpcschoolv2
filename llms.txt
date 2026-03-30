@@ -1,0 +1,29 @@
+# Pick My School
+
+> Leading School ERP Management Software to streamline institution administration with AI-driven insights.
+
+Welcome to Pick My School. This site provides information on our cloud-based ERP solution designed for educational institutions.
+
+## Core ERP Modules
+- **Student Information System:** Profiles, academic records, and documentation.
+- **Attendance Management:** Automated daily attendance with AI-driven reporting.
+- **Examination & Grading:** Digital exam scheduling, results, and gradebook management.
+- **Fee Management:** Online collections, invoice generation, and financial analytics.
+- **Hostel & Transport:** Detailed management for residential services and routing.
+- **Digital Library:** Resource management for institutional library systems.
+- **Faculty Management:** Staff profiles, payroll, and class assignment synchronization.
+
+## Key Navigation Links
+- [Home](index.html): Platform overview and value proposition.
+- [School ERP](school.html): Deep-dive into K-12 specific institutional tools.
+- [Features](features.html): Comprehensive list of all available global ERP features.
+- [About Us](about.html): Our mission, values, and company history.
+- [Contact Us](contact.html): Office locations, support desk, and demo requests.
+
+## Deployment & Technical Details
+- **Architecture:** Cloud-scalable SaaS platform.
+- **Technology Focus:** AI-driven analytics and educational automation.
+- **Publisher:** Patterns Infotech Pvt Ltd.
+- **Operational Region:** Global (Headquartered in Hyderabad, India).
+
+For detailed documentation or specialized integration requests, please reach out via our [Contact Page](contact.html).
