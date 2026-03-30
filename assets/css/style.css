@@ -1873,3 +1873,36 @@ footer .text-secondary {
         text-align: center;
     }
 }
+
+/* --- Performance & SEO Utility Classes --- */
+.max-w-400 { max-width: 400px !important; }
+.max-w-600 { max-width: 600px !important; }
+.max-w-700 { max-width: 700px !important; }
+.max-w-800 { max-width: 800px !important; }
+
+.lh-relaxed { line-height: 1.6 !important; }
+
+.gap-sm { gap: 8px !important; }
+
+.card-blue-tint {
+    background: rgba(0, 163, 255, 0.1) !important;
+    border-top: 2px solid #00a3ff !important;
+}
+
+.h-1 { height: 1px !important; }
+.h-8 { height: 8px !important; }
+.h-10 { height: 10px !important; }
+
+.min-h-70vh { min-height: 70vh !important; }
+
+.object-cover { object-fit: cover !important; }
+.aspect-16-9 { aspect-ratio: 16/9 !important; }
+
+/* Custom Progress Bar Widths */
+.w-25-p { width: 25% !important; }
+.w-40-p { width: 40% !important; }
+.w-65-p { width: 65% !important; }
+.w-78-p { width: 78% !important; }
+.w-82-p { width: 82% !important; }
+.w-85-p { width: 85% !important; }
+.w-92-p { width: 92% !important; }
