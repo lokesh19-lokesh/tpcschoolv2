@@ -113,15 +113,19 @@
                         </div>
                     </div>
 
-                    <div class="glass-card p-3 p-md-4">
+                    <div class="glass-card p-3 p-md-4 mb-4">
                         <div class="d-flex align-items-center">
-                            <i class="fas fa-phone-alt text-info fa-2x me-3"></i>
+                            <i class="fas fa-map-marker-alt text-danger fa-2x me-3"></i>
                             <div>
-                                <h5 class="mb-0">Call Us</h5>
-                                <p class="text-secondary mb-0">+91-8500693113</p>
+                                <h5 class="mb-0">Visit Our Office</h5>
+                                <p class="text-secondary small mb-0 lh-relaxed">
+                                    501, Vasuki Chandini Jewel, Cyber Hills Colony, VIP Hills, Silicon Valley, Madhapur, Hyderabad, Telangana 500081
+                                </p>
+                                <a href="https://maps.app.goo.gl/3fmxS8zLqX1R4H7z9" target="_blank" class="text-decoration-none small fw-bold">Open in Google Maps <i class="fas fa-external-link-alt ms-1"></i></a>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="col-lg-7 reveal">
@@ -331,22 +335,27 @@
     <footer>
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="col-lg-4 mb-4 mb-lg-0" itemscope itemtype="https://schema.org/LocalBusiness">
                     <div class="footer-logo mb-4">
-                        <img src="assets/img/logo.png" alt="Pick My School Logo">
+                        <img src="assets/img/logo.png" alt="Pick My School Logo" itemprop="logo">
                     </div>
-                    <p class="text-secondary mb-4">Pioneering the future of educational management with AI-driven
-                        insights and cloud scalability.</p>
-
-                    <ul class="list-unstyled text-secondary small mb-4">
-                        <li class="mb-3 d-flex align-items-start">
+                    <p class="text-secondary mb-4" itemprop="description">Pioneering the future of educational management with AI-driven insights and cloud scalability.</p>
+                    
+                    <address class="list-unstyled text-secondary small mb-4">
+                        <div class="mb-3 d-flex align-items-start">
                             <i class="fas fa-map-marker-alt text-primary mt-1 me-3 fs-5"></i>
-                            <span class="lh-relaxed">501, Vasuki Chandini Jewel, Cyber Hills Colony, VIP Hills,
-                                Silicon Valley, Madhapur, Hyderabad, Telangana 500081</span>
-                        </li>
+                            <span class="lh-relaxed" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">501, Vasuki Chandini Jewel, Cyber Hills Colony, VIP Hills, Silicon Valley, Madhapur</span>, 
+                                <span itemprop="addressLocality">Hyderabad</span>, 
+                                <span itemprop="addressRegion">Telangana</span> <span itemprop="postalCode">500081</span>
+                            </span>
+                        </div>
+                        <div class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-phone-alt text-primary mt-1 me-3 fs-5"></i>
+                            <span class="lh-relaxed" itemprop="telephone">+91-8500693113</span>
+                        </div>
+                    </address>
 
-
-                    </ul>
 
                     <div class="social-links">
                         <a href="#" class="bg-white text-dark"><i class="fab fa-linkedin-in"></i></a>
