@@ -1644,6 +1644,46 @@ footer .text-secondary {
     height: 600px;
     box-shadow: 0 30px 60px rgba(0,0,0,0.3);
     position: relative;
+    overflow: hidden; /* Prevent elements from bleeding out */
+}
+
+/* Canvas Interaction Styles */
+.canvas-element {
+    position: absolute;
+    cursor: move;
+    user-select: none;
+    transition: outline 0.1s ease;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.canvas-element:hover {
+    outline: 1px dashed #d12924;
+}
+
+.canvas-element.selected {
+    outline: 2px solid #d12924;
+    z-index: 100;
+}
+
+.editable-text:focus {
+    outline: 1px solid #d12924;
+    background: rgba(209, 41, 36, 0.05);
+    cursor: text;
+}
+
+/* Tool states */
+[data-tool="text"] .design-surface { cursor: text; }
+[data-tool="image"] .design-surface { cursor: crosshair; }
+[data-tool="shape"] .design-surface { cursor: crosshair; }
+[data-tool="pointer"] .design-surface { cursor: default; }
+
+.canvas-element img {
+    pointer-events: none; /* Prevent image selection issues during drag */
+}
+
+.canvas-element .bg-danger {
+    pointer-events: none;
 }
 
 /* Whatsapp Dashboard Simulation */

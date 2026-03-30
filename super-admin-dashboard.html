@@ -166,18 +166,24 @@
             <div id="canvasModule" class="dashboard-module">
                 <div class="canvas-app-window">
                     <div class="canvas-toolbar">
-                        <div class="tool-btn active"><i class="fas fa-mouse-pointer"></i></div>
-                        <div class="tool-btn"><i class="fas fa-font"></i></div>
-                        <div class="tool-btn"><i class="fas fa-image"></i></div>
-                        <div class="tool-btn"><i class="fas fa-shapes"></i></div>
-                        <div class="tool-btn mt-auto"><i class="fas fa-download"></i></div>
+                        <div id="tool-pointer" class="tool-btn active" title="Selection Tool"><i class="fas fa-mouse-pointer"></i></div>
+                        <div id="tool-text" class="tool-btn" title="Add Text"><i class="fas fa-font"></i></div>
+                        <div id="tool-image" class="tool-btn" title="Add Image"><i class="fas fa-image"></i></div>
+                        <div id="tool-shape" class="tool-btn" title="Add Shape"><i class="fas fa-shapes"></i></div>
+                        <div id="tool-download" class="tool-btn mt-auto" title="Download Image"><i class="fas fa-download"></i></div>
                     </div>
                     <div class="canvas-workspace">
-                        <div class="design-surface d-flex align-items-center justify-content-center text-center p-5">
-                            <div>
-                                <img src="assets/img/logo2.png" alt="Logo" width="120" class="mb-4">
-                                <h1 class="display-4 fw-bold mb-3">ADMISSION OPEN</h1>
-                                <p class="lead mb-4">Enroll now for the academic year 2026-27</p>
+                        <div id="design-canvas" class="design-surface">
+                            <div class="canvas-element" style="top: 50px; left: 165px; width: 120px;">
+                                <img src="assets/img/logo2.png" alt="Logo" width="100%" class="mb-4">
+                            </div>
+                            <div class="canvas-element" style="top: 200px; left: 0; width: 100%;">
+                                <h1 class="display-4 fw-bold mb-3 editable-text">ADMISSION OPEN</h1>
+                            </div>
+                            <div class="canvas-element" style="top: 320px; left: 0; width: 100%;">
+                                <p class="lead mb-4 editable-text">Enroll now for the academic year 2026-27</p>
+                            </div>
+                            <div class="canvas-element" style="top: 450px; left: 125px;">
                                 <div class="bg-danger text-white p-3 rounded-pill d-inline-block px-5">APPLY NOW</div>
                             </div>
                         </div>
@@ -293,6 +299,10 @@
     <div id="sidebarBackdrop" class="sidebar-backdrop d-lg-none"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Library for Canvas Image Download -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- Canvas Interaction Script -->
+    <script src="assets/js/canvas-editor.js"></script>
     <script>
         const sidebarToggle = document.getElementById('sidebarToggle');
         const sidebarClose = document.getElementById('sidebarClose');
